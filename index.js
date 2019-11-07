@@ -6,7 +6,7 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-converter = new showdown.Converter();
+converter = new showdown.Converter({tables: true});
 
 app.post("/convert", function(req, res, next) {
     if(typeof req.body.content == 'undefined' || req.body.content == null) {
