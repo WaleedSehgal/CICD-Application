@@ -19,8 +19,17 @@ Request.post({
     var header = '';
     body = JSON.parse(body);
 
-    console.log('<!DOCTYPE html>'
-    + '<html><head>' + header + '</head><body>' + body[1] + '</body></html>');
-    return '<!DOCTYPE html>'
+    let doc = '<!DOCTYPE html>'
     + '<html><head>' + header + '</head><body>' + body[1] + '</body></html>';
+
+    fs.writeFile('doc.html', doc, (err) => {
+        
+        if(error) {
+            return console.log(error);
+        }
+    
+        // success case, the file was saved
+        console.log('html generated!');
+    });
+
 });
