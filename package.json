@@ -1,0 +1,28 @@
+{
+  "name": "docsbuild",
+  "version": "1.0.0",
+  "description": "Convert Markdown to HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walsehgal/docsBuild.git"
+  },
+  "author": "Waleed Sehgal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walsehgal/docsBuild/issues"
+  },
+  "homepage": "https://github.com/walsehgal/docsBuild#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "doasync": "^2.0.1",
+    "expres": "0.0.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "request": "^2.88.0",
+    "showdown": "^1.9.1"
+  }
+}
