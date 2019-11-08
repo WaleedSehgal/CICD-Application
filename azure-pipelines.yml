@@ -30,8 +30,17 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/output'
     Contents: '**\*'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/outpout'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/output'
     CleanTargetFolder: true
+
+- task: CopyFiles@2
+  displayName: 'Copy deployment content'
+  inputs: 
+    SourceFolder: '$(Build.SourcesDirectory)'
+    contents: '**\*' 
+    targetFolder: $(Build.ArtifactStagingDirectory)
+    cleanTargetFolder: true
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
