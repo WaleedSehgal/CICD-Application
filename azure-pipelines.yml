@@ -21,16 +21,22 @@ steps:
     npm run build
   displayName: 'npm install and build'
   
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'node app.js'
+    failOnStderr: true
+    
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)/output'
     Contents: '**\*'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/outpout'
     CleanTargetFolder: true
-  
-- task: Bash@3
+- task: PublishBuildArtifacts@1
   inputs:
-    targetType: 'inline'
-    script: 'node app.js'
-    failOnStderr: true
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'Publish artifact'
+    publishLocation: 'Container'
+
 
