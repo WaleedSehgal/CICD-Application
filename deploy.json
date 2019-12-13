@@ -4,7 +4,7 @@
     "parameters": {
         "blogStorage": {
             "type": "string",
-            "defaultValue": "mdDocs0071"
+            "defaultValue": "mdocs071"
         }
     },
     "variables": {},
