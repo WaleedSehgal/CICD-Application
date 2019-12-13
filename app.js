@@ -2,7 +2,7 @@ var Request = require("request");
  
 const fs = require('fs');
                   
-var data = fs.readFileSync("./articles/privateAtlas.md", { "encoding": "utf8"});
+var data = fs.readFileSync("./articles/doc.md", { "encoding": "utf8"});
 
 Request.post({
     "headers": { "content-type": "application/json" },
