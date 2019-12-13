@@ -22,7 +22,7 @@ Request.post({
     let doc = '<!DOCTYPE html>'
     + '<html><head>' + header + '</head><body>' + body[1] + '</body></html>';
 
-    fs.writeFile('./output/doc.html', doc, (err) => {
+    fs.writeFile('./output/mddoc007.html', doc, (err) => {
         
         if(error) {
             return console.log(error);
